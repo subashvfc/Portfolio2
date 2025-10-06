@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Engineer — Portfolio</title>
+  <meta name="description" content="Creative AI Engineer portfolio with neon glassmorphism and parallax animations." />
+  <link rel="icon" href="assets/ai-cube.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/noise.png" as="image">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <div class="noise"></div>
+
+  <header class="nav glass">
+    <div class="brand">
+      <img src="assets/ai-cube.svg" alt="AI Cube Logo">
+      <span>NeonMorph AI</span>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="cta" href="#contact">Hire Me</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="parallax layer l1"></div>
+      <div class="parallax layer l2"></div>
+      <div class="parallax layer l3"></div>
+
+      <div class="hero__content glass" data-tilt>
+        <h1><span class="accent">Marketplace-grade</span> AI Engineer</h1>
+        <p>I design and ship end‑to‑end AI systems — from data and training pipelines to realtime inference, safety, and product UX. I love neon gradients, clean APIs, and measurable impact.</p>
+        <div class="hero__actions">
+          <a class="btn primary" href="#projects">Explore Work</a>
+          <a class="btn ghost" href="#about">About Me</a>
+        </div>
+        <div class="hero__badges">
+          <div class="badge"><img src="assets/ai-chip.svg" alt="">Edge‑ready Inference</div>
+          <div class="badge"><img src="assets/brain-network.svg" alt="">Applied Research</div>
+          <div class="badge"><img src="assets/ai-cube.svg" alt="">MLOps & Reliability</div>
+        </div>
+      </div>
+
+      <div class="hero__portrait" aria-hidden="true">
+        <!-- Abstract 3D rings built with SVG -->
+        <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff3cac"/>
+              <stop offset="0.5" stop-color="#784BA0"/>
+              <stop offset="1" stop-color="#2B86C5"/>
+            </linearGradient>
+            <filter id="blur"><feGaussianBlur stdDeviation="8"/></filter>
+          </defs>
+          <g transform="translate(300,310)">
+            <ellipse rx="210" ry="72" fill="url(#ring)" opacity="0.9"></ellipse>
+            <ellipse rx="150" ry="52" fill="url(#ring)" opacity="0.7" transform="rotate(20)"></ellipse>
+            <ellipse rx="260" ry="86" fill="url(#ring)" opacity="0.55" transform="rotate(-16)"></ellipse>
+            <circle r="140" fill="url(#ring)" opacity="0.35" filter="url(#blur)"></circle>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section id="about" class="section narrow">
+      <div class="section__header">
+        <img src="assets/brain-network.svg" alt="Neural icon">
+        <h2>About</h2>
+      </div>
+      <p class="lead">I’m an AI engineer focused on multimodal systems, retrieval, and delightful interfaces. I bridge research and production with strong MLOps and frontend craft.</p>
+      <ul class="highlights">
+        <li>🧠 Built RAG pipelines serving millions of queries/month</li>
+        <li>🚀 Led latency optimizations to <b>&lt;120ms</b> P95</li>
+        <li>🛡️ Implemented evals, red-teaming, and safety gates</li>
+        <li>🧩 Shipped custom tokenizers & quantized models to edge</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section__header">
+        <img src="assets/ai-chip.svg" alt="Chip icon">
+        <h2>Skills</h2>
+      </div>
+
+      <div class="grid skills">
+        <article class="card glass" data-reveal data-tilt>
+          <h3>Modeling</h3>
+          <p>LLMs · Vision · Speech · Fine‑tuning · Distillation · Quantization</p>
+        </article>
+        <article class="card glass" data-reveal data-tilt>
+          <h3>Systems</h3>
+          <p>PyTorch · Triton · ONNX · CUDA · Vector DBs · Streaming</p>
+        </article>
+        <article class="card glass" data-reveal data-tilt>
+          <h3>MLOps</h3>
+          <p>Airflow · Ray · Weights & Biases · Kubernetes · Grafana</p>
+        </article>
+        <article class="card glass" data-reveal data-tilt>
+          <h3>Product</h3>
+          <p>TypeScript · React · UX research · A/B testing · Analytics</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section__header">
+        <img src="assets/ai-cube.svg" alt="Cube icon">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="grid projects">
+        <article class="project glass" data-reveal data-tilt>
+          <div class="project__tag">RAG · Realtime</div>
+          <h3>Neon Search</h3>
+          <p>Low‑latency retrieval with hybrid sparse+dense, semantic caching, and streaming synthesis.</p>
+          <a class="btn tiny" href="#">Case Study</a>
+        </article>
+
+        <article class="project glass" data-reveal data-tilt>
+          <div class="project__tag">Agents</div>
+          <h3>Operator</h3>
+          <p>Task‑oriented agents with tools, constrained decoding, and deterministic plans.</p>
+          <a class="btn tiny" href="#">Demo</a>
+        </article>
+
+        <article class="project glass" data-reveal data-tilt>
+          <div class="project__tag">Edge</div>
+          <h3>Pulse</h3>
+          <p>Quantized transformer running on-device with CPU/GPU fallback and smart batching.</p>
+          <a class="btn tiny" href="#">Write‑up</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section__header">
+        <img src="assets/brain-network.svg" alt="">
+        <h2>Contact</h2>
+      </div>
+      <div class="grid contact__grid">
+        <form class="glass" data-reveal onsubmit="event.preventDefault(); alert('Thanks! I\'ll be in touch.');">
+          <label>Name<input required type="text" placeholder="Your name"></label>
+          <label>Email<input required type="email" placeholder="you@domain.com"></label>
+          <label>Message<textarea rows="5" placeholder="Tell me about your project"></textarea></label>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+
+        <div class="glass card" data-reveal>
+          <h3>Let's build something bold</h3>
+          <p>Open to full‑time roles and selected collaborations.</p>
+          <ul class="social">
+            <li><a href="#" aria-label="GitHub">GitHub ↗</a></li>
+            <li><a href="#" aria-label="LinkedIn">LinkedIn ↗</a></li>
+            <li><a href="#" aria-label="Twitter">Twitter/X ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> NeonMorph AI — Crafted with ♥️</small>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
